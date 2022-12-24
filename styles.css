@@ -1,0 +1,121 @@
+
+*{
+    margin:200
+}
+.container{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  Width:100%;
+  Height:100%;
+  gap:10px;
+  padding:10px;
+  grid-template-rows: repeat(5, 1fr); 
+  grid-Column-gap: 10px;
+  grid-row-gap:10px;
+  grid-template-areas:
+    'header    header  '
+     'Life         Life   '
+     'Favorites    Games '
+     'Follow        ..  ';
+                   
+}
+.Life{grid-area: Life;
+background-color: #BDBBB6;
+grid-column:2/ 3;
+  grid-row: 2;
+}
+
+
+.Games{grid-area: Games; 
+  grid-column: 2;
+  grid-row: 3/4;
+background-color: #BDBBB6;
+Width: 100%;
+Height:100%;}
+
+
+.Favorites{ grid-area:Favorites;
+  grid-column: 2/3;
+  grid-row: 4/5;
+background-color:#BDBBB6;
+  Height:100%;
+  Width:100%;
+}
+
+
+body {
+  background-color: #73877B;
+   overflow-y: scroll;
+    overflow-x: scroll;
+}
+.header {display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #839788;
+  color: #F5E4D7;
+  }
+
+.Follow {
+display: inline-flex;
+ width:350px;
+  height:200px;
+  grid-column: 1;
+  grid-row: 1;
+Background-color:#BDBBB6}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    position: flex;
+    top: 10;
+    left: 0;
+    display: flex;
+  Flex-wrap: wrap;  
+   align-content: flex-start;
+    align-items: center;
+    padding: 0 5vw;
+    background: #E5D1D0;
+  z-index: 9;}
+  
+  .links-container{
+    display: flex;
+    list-style: none;
+}
+
+.link{
+    padding: 10px;
+    margin-center: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+}
+@media screen and (max-width: 800px) 
+{
+   .rightcolumn {  
+    width: 100%;
+    padding: 5px;
+  }
+}
+  .About{
+    Display:grid;
+    grid-area:about;
+  background-color: #E5D1D0;
+  padding: 20px;
+  margin-top: 20px;
+}
+  .img{display:grid;
+    grid-area:img;
+  background-color: #839788;
+  width: 300px;
+  padding: 20px;
+}
+  .rightcolumn{
+    display:grid;
+    grid-area:rightcolumn;
+    grid-row:1;
+    grid-column:7,8; 
+  width: 30%;
+  padding-right: 20px;
+}
+
+  
